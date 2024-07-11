@@ -18,7 +18,7 @@ function Hero() {
         </p>
       </div>
       <div className="mt-6 flex justify-center">
-        <button className="font-bold border border-primary border-solid rounded-lg p-3">CONTACT ME</button>
+        <button className="font-bold border border-primary border-solid rounded-lg p-3 hover:bg-bgSecondary">CONTACT ME</button>
       </div>
     </div>
   );

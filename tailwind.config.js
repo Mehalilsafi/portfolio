@@ -18,7 +18,7 @@ export default {
         bgSecondary: 'var(--secondary-color)',
       },
       boxShadow: {
-        'custom': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'custom': '0 10px 20px -5px rgba(0, 0, 0, 0.6), 0 6px 10px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4)',
       },
     },
   },

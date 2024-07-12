@@ -45,16 +45,17 @@ function About() {
               <li>Supabase</li>
             </div>
           </ul>
-          <p className="text-base  font-semibold">
+          <p className="text-base  font-semibold text-[#cccccc]">
             outside of the work ,I'm interested in following the developments of
             science. I also go to the gym a lot . And make content .
           </p>
         </div>
         <div className=" md:col-span-2 lg:col-span-1  flex justify-center ">
+    
           <img
             src={safi}
             alt="safi"
-            className="border border-transparent border-solid h-[300px] w-[300px] rounded-xl shadow-custom bg-bgSecondary hidden md:flex"
+            className="border border-transparent border-solid h-[300px] w-[300px] rounded-xl shadow-custom bg-bgSecondary hidden md:flex  transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-black/70"
           />
         </div>
       </div>

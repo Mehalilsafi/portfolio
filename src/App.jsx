@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="bg-bgPrimary">
 
-    <div className="m-5 pb-60 pl-60 pr-60  ">
+    <div className="m-5 lg:pb-[200px] lg:pl-[200px] lg:pr-[200px]  ">
 
       <Nav />
       <Hero/>

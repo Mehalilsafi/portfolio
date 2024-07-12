@@ -13,7 +13,7 @@ import wefit from "../assets/wefit.png";
 
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
-export default function App() {
+export default function Slider() {
   return (
     <div className="flex justify-center items-center mt- bg-bgSecondary mt-9 rounded-2xl">
       <Swiper
@@ -30,7 +30,7 @@ export default function App() {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper p-28"
+        className="mySwiper  p-10 md:p-28"
       >
         <SwiperSlide>
           <img src={bio} className="rounded-lg" />

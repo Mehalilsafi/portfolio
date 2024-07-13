@@ -9,7 +9,7 @@ function Hero() {
           hi,<span className="!text-primary">safi</span> here.
         </h1>
         <h1 className="text-2xl font-semibold text-[#cccccc] ">
-          i create stuff somtimes{" "}
+        I create stuff sometimes{" "}
         </h1>
         <p className="font-normal text-base text-[#cccccc]">
           {" "}

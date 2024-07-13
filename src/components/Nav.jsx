@@ -10,7 +10,7 @@ function Nav() {
       <img src={logo} alt="logo image" />
       <ul className="flex justify-end items-center gap-3 w-[200px]">
         <li>
-           <a href="https://github.com/account"><FontAwesomeIcon icon={faGithub} className="w-6 h-4" /> </a>
+           <a href="https://github.com/Mehalilsafi"><FontAwesomeIcon icon={faGithub} className="w-6 h-4" /> </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/safi-mhalil"><FontAwesomeIcon icon={faLinkedin} className="w-6 h-4" /></a>

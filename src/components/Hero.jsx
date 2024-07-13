@@ -11,7 +11,7 @@ function Hero() {
         <h1 className="text-2xl font-semibold text-[#cccccc] ">
           i create stuff somtimes{" "}
         </h1>
-        <p className="font-normal text-xs text-[#cccccc]">
+        <p className="font-normal text-base text-[#cccccc]">
           {" "}
           I{'\''}m a passionate full-stack developer with expertise in Next.js and
           Supabase. I thrive on creating responsive, high-performance websites

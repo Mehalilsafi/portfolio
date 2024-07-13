@@ -11,9 +11,9 @@ function About() {
       <div className="grid grid-cols-4 gap-5 mt-9">
         <div className="flex flex-col gap-5 col-span-4  md:col-span-2 lg:col-span-3">
           <p className="text-base  font-semibold">
-            I am currently a{" "}
+            I{'\''}m currently a{" "}
             <span className="!text-primary font-bold !text-lg">freelancer</span>
-            . At the same time, I am undertaking a part-time master of Science
+            . At the same time, I{'\''}m undertaking a part-time master of Science
             in Software Engineering at University of{" "}
             <span className="!text-primary font-bold !text-lg">
               {" "}
@@ -50,7 +50,7 @@ function About() {
             </div>
           </ul>
           <p className="text-base  font-semibold text-[#cccccc]">
-            outside of the work ,I'm interested in following the developments of
+            outside of the work ,I{'\''}m interested in following the developments of
             science. I also go to the gym a lot . And make content .
           </p>
         </div>

@@ -13,9 +13,9 @@ function Hero() {
         </h1>
         <p className="font-normal text-xs text-[#cccccc]">
           {" "}
-          I'm a passionate full-stack developer with expertise in Next.js and
+          I{'\''}m a passionate full-stack developer with expertise in Next.js and
           Supabase. I thrive on creating responsive, high-performance websites
-          that provide seamless user experiences. Let's build something amazing
+          that provide seamless user experiences. Let{'\''}s build something amazing
           together!{" "}
         </p>
       </div>

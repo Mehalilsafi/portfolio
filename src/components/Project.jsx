@@ -16,7 +16,7 @@ function Project() {
           deploy: "",
         },
       ],
-      link:'https://github.com/Mehalilsafi/bioExpress',
+      link: "https://github.com/Mehalilsafi/bioExpress",
     },
     {
       id: 2,
@@ -30,8 +30,7 @@ function Project() {
           deploy: "",
         },
       ],
-      link:'https://github.com/messabih-khalil/uhbc-project',
-      
+      link: "https://github.com/messabih-khalil/uhbc-project",
     },
     {
       id: 3,
@@ -45,7 +44,7 @@ function Project() {
           deploy: "",
         },
       ],
-      link :"https://github.com/Mehalilsafi/bookeling",
+      link: "https://github.com/Mehalilsafi/bookeling",
     },
     {
       id: 4,
@@ -59,7 +58,7 @@ function Project() {
           deploy: "",
         },
       ],
-      link:"https://github.com/Mehalilsafi/WefitApp",
+      link: "https://github.com/Mehalilsafi/WefitApp",
     },
     {
       id: 5,
@@ -73,32 +72,46 @@ function Project() {
           deploy: "",
         },
       ],
-      link:'https://github.com/Mehalilsafi/PicVibe',
+      link: "https://github.com/Mehalilsafi/PicVibe",
     },
   ];
   return (
     <div className="mt-24">
-      <h1 className="font-semibold text-3xl"> / pet projectes</h1>
-      <Slider />
+      <div className="flex gap-5 items-center">
+        <h1 className="font-semibold text-3xl">/ pet projects</h1>
+        <div className="bg-bgSecondary h-[2px] md:w-[500px]"></div>
+      </div>
+      <Slider  />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-9">
         {boxObject.map((card, index) => (
-          <div key={index} className="bg-bgSecondary p-6  rounded-xl shadow-custom transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-black/70">
+          <div
+            key={index}
+            className="bg-bgSecondary p-6  rounded-xl shadow-custom transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-black/70"
+          >
             <div className="flex justify-between items-center">
               <FontAwesomeIcon icon={faFolder} className="text-primary" />
-             <a href={card.link}> <FontAwesomeIcon icon={faGithub} className="w-6 h-4 " /></a>
+              <a href={card.link}>
+                {" "}
+                <FontAwesomeIcon icon={faGithub} className="w-6 h-4 " />
+              </a>
             </div>
             <div className="flex flex-col gap-5 mt-5">
               <h1 className="font-bold text-xl">{card.name}</h1>
-              <p className="font-semibold text-sm text-[#cccccc]">{card.descreption}</p>
+              <p className="font-semibold text-sm text-[#cccccc]">
+                {card.descreption}
+              </p>
               <p className="font-medium text-sm text-[#cccccc]">{card.tool}</p>
             </div>
           </div>
         ))}
       </div>
       <div className="flex flex-col justify-center items-center mt-28">
-
-      <p className="font-light text-sm text-[#cccccc]">Built and designed by safi mehalil.</p>
-      <p className="font-light text-sm text-[#cccccc]">all rights reserved.</p>
+        <p className="font-light text-sm text-[#cccccc]">
+          Built and designed by safi mehalil.
+        </p>
+        <p className="font-light text-sm text-[#cccccc]">
+          all rights reserved.
+        </p>
       </div>
     </div>
   );

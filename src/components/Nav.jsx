@@ -13,7 +13,7 @@ function Nav() {
            <a href="https://github.com/account"><FontAwesomeIcon icon={faGithub} className="w-6 h-4" /> </a>
         </li>
         <li>
-          <a href="www.linkedin.com/in/safi-mhalil"><FontAwesomeIcon icon={faLinkedin} className="w-6 h-4" /></a>
+          <a href="https://www.linkedin.com/in/safi-mhalil"><FontAwesomeIcon icon={faLinkedin} className="w-6 h-4" /></a>
         </li>
        
       </ul>

@@ -3,7 +3,11 @@ import safi from "../assets/safi.svg";
 function About() {
   return (
     <div className="mt-24">
+      <div className="flex gap-5 items-center">
+
       <h1 className="font-semibold text-3xl">/ about me</h1>
+      <div className="bg-bgSecondary h-[2px] md:w-[500px]"></div>
+      </div>
       <div className="grid grid-cols-4 gap-5 mt-9">
         <div className="flex flex-col gap-5 col-span-4  md:col-span-2 lg:col-span-3">
           <p className="text-base  font-semibold">

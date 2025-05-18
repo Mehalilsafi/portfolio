@@ -48,6 +48,22 @@ function About() {
               <li className="text-xl font-black text-primary">.</li>
               <li>Supabase</li>
             </div>
+            <div className="flex items-center gap-2">
+              <li className="text-xl font-black text-primary">.</li>
+              <li>Express js</li>
+            </div>
+            <div className="flex items-center gap-2">
+              <li className="text-xl font-black text-primary">.</li>
+              <li>docker</li>
+            </div>
+            <div className="flex items-center gap-2">
+              <li className="text-xl font-black text-primary">.</li>
+              <li>socket.io</li>
+            </div>
+             <div className="flex items-center gap-2">
+              <li className="text-xl font-black text-primary">.</li>
+              <li>MongoDb</li>
+            </div>
           </ul>
           <p className="text-base  font-semibold text-[#cccccc]">
             outside of the work ,I{'\''}m interested in following the developments of

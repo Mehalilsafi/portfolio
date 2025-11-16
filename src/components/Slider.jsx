@@ -10,11 +10,18 @@ import pic from "../assets/picVibe.png";
 import lib from "../assets/lib.png";
 import univ from "../assets/univ.png";
 import wefit from "../assets/wefit.png";
+import hanouti from "../assets/hanouti.png"
 
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function Slider() {
   const images = [
+    {
+src:hanouti,
+name:'hanouti',
+description:"Landing Page Builder with Ecommerce Analytics ",
+tool:"React.js, Typescript, Tailwind CSS, shadcn, React Router,Express.js Postgresql"
+    },
     {
       src: bio,
       name: "bio Express",

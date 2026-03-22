@@ -1,22 +1,26 @@
-import "./App.css";
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Project from "./components/Project";
+import "./portfolio.css"; /* ← import the design system first */
+import Nav      from "./components/Nav";
+import Hero     from "./components/Hero";
+import About    from "./components/About";
+import Projects from "./components/Project";
+import Contact  from "./components/Contact";
+
 function App() {
   return (
-    <div className="bg-bgPrimary">
-      <div
-        className="m-5 lg:pb-[70px] lg:pl-[70px] lg:pr-[70px] 
-     xl:pb-[150] xl:pl-[150] xl:pr-[150] 2xl:pb-[200px] 2xl:pl-[200px] 2xl:pr-[200px] ;
-    "
-      >
-        <Nav />
+    <>
+      {/* Ambient background orbs — rendered once at the root */}
+      <div className="pf-orb pf-orb-teal" aria-hidden="true" />
+      <div className="pf-orb pf-orb-blue" aria-hidden="true" />
+
+      <Nav />
+
+      <main>
         <Hero />
         <About />
-        <Project />
-      </div>
-    </div>
+        <Projects />
+        <Contact />
+      </main>
+    </>
   );
 }
 

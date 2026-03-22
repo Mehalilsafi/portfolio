@@ -1,0 +1,274 @@
+/* ─────────────────────────────────────────────
+   SAFI PORTFOLIO — DESIGN SYSTEM
+   Import this once in your main entry file:
+   import './portfolio.css'
+   ───────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+/* ── TOKENS ── */
+:root {
+  --bg:             #080b10;
+  --surface:        #0f1620;
+  --surface2:       #141d2b;
+  --border:         rgba(255, 255, 255, 0.06);
+  --border-accent:  rgba(99, 211, 168, 0.25);
+  --accent:         #63d3a8;
+  --accent-dim:     rgba(99, 211, 168, 0.08);
+  --accent-glow:    rgba(99, 211, 168, 0.18);
+  --text:           #eaf0f7;
+  --text-dim:       #8b9ab0;
+  --text-muted:     #4e6070;
+  --font-head:      'Plus Jakarta Sans', sans-serif;
+  --font-body:      'Manrope', sans-serif;
+  --nav-h:          64px;
+  --radius:         12px;
+  --radius-lg:      18px;
+  --max-w:          1060px;
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ── GRAIN OVERLAY ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+/* ── AMBIENT ORBS ── */
+.pf-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+.pf-orb-teal {
+  width: 640px; height: 640px;
+  background: #63d3a8;
+  opacity: 0.09;
+  top: -220px; right: -220px;
+  animation: oDrift1 22s ease-in-out infinite alternate;
+}
+.pf-orb-blue {
+  width: 520px; height: 520px;
+  background: #2563eb;
+  opacity: 0.08;
+  bottom: 0; left: -180px;
+  animation: oDrift2 28s ease-in-out infinite alternate;
+}
+@keyframes oDrift1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-80px, 100px) scale(1.12); }
+}
+@keyframes oDrift2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(80px, -80px) scale(1.18); }
+}
+
+/* ── LAYOUT ── */
+.pf-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.pf-section { padding: 100px 0 0; }
+
+/* ── SECTION LABELS ── */
+.pf-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.pf-label::before {
+  content: '';
+  width: 22px; height: 1px;
+  background: var(--accent);
+  display: block;
+}
+
+.pf-heading {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: var(--text);
+  line-height: 1.06;
+  margin-bottom: 48px;
+}
+
+/* ── CARD ── */
+.pf-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.pf-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.pf-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+}
+.pf-card:hover::before { opacity: 1; }
+
+/* ── BUTTONS ── */
+.pf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 26px;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
+  letter-spacing: 0.01em;
+}
+.pf-btn-primary {
+  background: var(--accent);
+  color: #080b10;
+}
+.pf-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px var(--accent-glow);
+}
+.pf-btn-outline {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+.pf-btn-outline:hover {
+  color: var(--text);
+  border-color: var(--border-accent);
+  background: var(--accent-dim);
+}
+
+/* ── CHIPS ── */
+.pf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  transition: border-color 0.2s, color 0.2s, transform 0.2s, background 0.2s;
+  cursor: default;
+}
+.pf-chip:hover {
+  border-color: var(--border-accent);
+  color: var(--text);
+  background: var(--accent-dim);
+  transform: translateY(-1px);
+}
+.pf-chip svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+.pf-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ── SCROLL REVEAL ── */
+.pf-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.pf-reveal.pf-in { opacity: 1; transform: translateY(0); }
+
+/* ── ICON BUTTON ── */
+.pf-icon-btn {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  text-decoration: none;
+  background: transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+.pf-icon-btn:hover {
+  color: var(--accent);
+  border-color: var(--border-accent);
+  background: var(--accent-dim);
+}
+
+/* ── CARD LINK ICON ── */
+.pf-card-link {
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.pf-card-link:hover {
+  color: var(--accent);
+  border-color: var(--border-accent);
+  background: var(--accent-dim);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .pf-section { padding: 72px 0 0; }
+  .pf-heading { margin-bottom: 32px; }
+}
+@media (max-width: 480px) {
+  .pf-container { padding: 0 16px; }
+}
+
+/* ── SWIPER OVERRIDES ── */
+.swiper-pagination-bullet { background: var(--text-muted) !important; }
+.swiper-pagination-bullet-active { background: var(--accent) !important; }

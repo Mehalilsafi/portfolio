@@ -10,15 +10,15 @@ import pic from "../assets/picVibe.png";
 import lib from "../assets/lib.png";
 import univ from "../assets/univ.png";
 import wefit from "../assets/wefit.png";
-import hanouti from "../assets/hanouti.png"
+import ayor from "../assets/ayor.png"
 
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function Slider() {
   const images = [
     {
-src:hanouti,
-name:'hanouti',
+src:ayor,
+name:'ayor.ai',
 description:"Landing Page Builder with Ecommerce Analytics ",
 tool:"React.js, Typescript, Tailwind CSS, shadcn, React Router,Express.js Postgresql"
     },
